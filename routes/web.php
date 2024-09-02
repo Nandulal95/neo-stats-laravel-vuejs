@@ -17,8 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::get('getneobydate', [NeoController::class, 'getneobydate']);
-Route::post('collectdate', [NeoController::class, 'collectdate']);
-Route::get('getapidata', [NeoController::class, 'getapidata']);
