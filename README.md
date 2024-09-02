@@ -1,67 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Asteroid - Neo Stats
+Instructions
+The specification for the test application below applies to both web and mobile applications. If you have applied for a Web Developer position then build the Web app. If you have applied for the Mobile app developer position, then build the mobile application (either Android or iOS).
 
-## About Laravel
+Please make sure that you write your best code as this test is basically to evaluate your coding skills. Specially make sure:
+Your code is architected well
+Code should be modular and reusable
+Code should follow standard coding conventions
+Code should be secure and follow best practices
+Code should be commented and documented
+Summary
+Neo stands for Near-Earth Objects. Nasa provides an open API and in this problem, we will be using the Asteroid NeoWs API.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+We want to plot a line chart showing the number of asteroids passing near the Earth each day for the given date range as well as find the nearest asteroid and the fastest asteroid.
+Data Source
+NASA’s Open API -> https://api.nasa.gov (Go to Browse APIs -> Asteroids - NeoWs -> Neo - Feed)
+Neo Feed
+Retrieve a list of Asteroids based on their closest approach date to Earth
+https://api.nasa.gov/neo/?api_key=DEMO_KEY
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Web or Mobile Application
+This should be a single-page web/mobile application. Feel free to use any reactive JS libraries like VueJS, AngularJS, or anything you like. If you are building a mobile application then use similar technologies available for your platform. Use Twitter Bootstrap or Tailwind for the UI on the web and equivalent technologies for mobile platforms. For the backend, use the technology you are applying for (Laravel, PHP, CodeIgniter, WordPress, Java - Android, Swift - iOS, etc.)
+User Story
+As a user, I want to select/enter start and end dates so that I can view the Neo Stats for that date range.
 
-## Learning Laravel
+Provide a way (input) for the user to specify the start and end dates. Use a date picker for the respective form fields.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Once the dates are selected, the user will hit “Submit”. On Submit, fetch the Neo Feed from NASA’s open API for the given date range and show the following output:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+A) Show the following stats (calculated from the data you will receive from Neo Feed)
+Fastest Asteroid in km/h (Respective Asteroid ID & its speed)
+Closest Asteroid (Respective Asteroid ID & its distance)
+Average Size of the Asteroids in kilometers
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+B) Plot a graph showing the total number of asteroids for each day of the given date range. Use a bar or line chart for the same.
+Use https://www.chartjs.org/ to plot the chart on the web and equivalent library for the mobile platforms. Or any other charting library of your choice.
 
-### Premium Partners
+Version Control
+Put your source code in a Git repository (Bitbucket or Github) and share the URL to the same.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Deployment
+Deploy the APP on free Heroku or AWS or Azure (or any other free cloud hosting provider) and share the URL for testing. This is NOT compulsory but if you can do this, it will give you an added advantage.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# neo-stats-laravel-vuejs
+Notes
+You can refer to respective manuals/docs
+You are free to get ideas online but DO NOT copy/paste the code
+Feel free to get in touch should you need any clarifications
+Please follow PSR4 coding conventions (if using PHP/Laravel for the backend)
