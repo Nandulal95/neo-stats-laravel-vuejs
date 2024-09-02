@@ -50,3 +50,6 @@ You can refer to respective manuals/docs
 You are free to get ideas online but DO NOT copy/paste the code
 Feel free to get in touch should you need any clarifications
 Please follow PSR4 coding conventions (if using PHP/Laravel for the backend)
+
+![alt text](Nandulal95/neo-stats-laravel-vuejs/blob/main/public/images/task-1a?raw=true)
+![alt text](Nandulal95/neo-stats-laravel-vuejs/blob/main/public/images/task-1b?raw=true)
